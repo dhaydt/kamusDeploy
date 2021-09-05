@@ -1,0 +1,420 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  font-size:26px;
+  background-color: white;
+  color: black;
+}
+
+a {
+  color: black;
+}
+
+.custom-logo {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.text-opaque {
+  opacity: 0.6;
+}
+
+.link-opened {
+  height:100%;
+}
+
+.timer {
+  height:40px;
+  background-color: #0E6BA8;
+  position: relative;
+  overflow: hidden;
+}
+
+.timer-custom-logo {
+  height: calc(100% - 10px);
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: white;
+  z-index: 20;
+}
+
+.timer-percentage {
+  position: absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background-color: rgba(0,0,0,.3);
+}
+
+.time-left {
+  z-index:2;
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  font-size:26px;
+  line-height:40px;
+  text-align: center;
+  color: white;
+  font-weight: 300;
+}
+
+.timer:hover .time-left {
+  opacity:1;
+}
+
+.time-left.faded {
+  opacity:0.4;
+}
+
+.time-left-value {
+  font-weight: 900;
+}
+
+.time-left-value:before {
+  content: "\00a0 ";
+}
+
+.timer.overtime {
+  background-color: #D81E5B;
+}
+
+.timer.overtime .time-left {
+  color: #FDF0D5;
+  opacity:1;
+}
+
+.frame {
+  display: block;
+  height: calc(100% - 40px);
+  width: 100%;
+  border: none;
+}
+
+.frame.no-timer {
+  height: 100%;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.middle {
+  display: table;
+  width: calc(100% - 20px);
+  margin: 0 10px;
+  height:100%;
+}
+
+.middle-inner {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.caution-container {
+  padding: 0 10px;
+  max-width:640px;
+  margin: 0 auto;
+}
+
+.caution-header {
+  font-size: 200%;
+}
+
+.caution-respondent {
+  font-size: 80%;
+}
+
+.caution-message {
+  margin-top:1em;
+}
+
+.caution-message-time {
+  font-weight: 900;
+}
+
+.caution-message-time:before, .caution-message-time:after {
+  content: "\00a0 ";
+}
+
+.caution-message-time-value:after {
+  content: "\00a0 ";
+}
+
+.cta-button {
+  margin: 40px 0;
+  display: inline-block;
+  cursor: pointer;
+  border: solid 1px #0e6ba8;
+  color: #0e6ba8;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+}
+
+.cta-button:hover {
+  border-width: 3px;
+  margin: 38px 0;
+  border-radius: 8px;
+}
+
+.caution-alert {
+  text-align: left;
+  border-radius:13px;
+  padding: 10px 20px 20px 20px;
+  font-size: 16px;
+  border: solid 1px black;
+  max-width: 380px;
+  margin: 20px auto 0 auto;
+}
+
+.info-alert {
+  text-align: left;
+  border-radius:13px;
+  padding: 20px;
+  font-size: 16px;
+  padding: 10px 20px 20px 20px;
+  max-width: 380px;
+  margin: 20px auto 0 auto;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+/* Messages */
+
+.form-submitted {
+  padding: 4px 0;
+  text-align: center;
+  background-color: #2ba88b;
+  color: white;
+}
+
+.form-submitted.hideScore {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+}
+
+/* Plasm */
+
+.plasm {
+  text-align: center;
+}
+
+.plasm p, .plasm ul {
+  font-size: 18px;
+}
+
+.plasm-consent-list {
+  text-align: left;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.plasm-video {
+  position: relative;
+  width: 320px;
+  height: 240px;
+  display: inline-block;
+  border: solid 1px black;
+  margin: 10px;
+}
+
+.plasm-video video {
+  width: 100%;
+  height: 100%;
+}
+
+.plasm-video .plasm-face-area {
+  z-index: 2;
+  position: absolute;
+  top: 20px;
+  left: 78px;
+  width: 160px;
+  height: 200px;
+  border: solid 2px #0099FF !important;
+}
+
+.plasm-setup-retry {
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.plasm-setup-retry:hover {
+  text-decoration: none;
+}
+
+/* Hide timer feature */
+
+.link-opened.hide-timer .timer {
+  display: none;
+}
+
+.link-opened.hide-timer .frame {
+  height: 100%;
+}
+
+/* Public form */
+
+.form-auth-left, .form-auth-right {
+  float: left;
+  width: 40%;
+}
+
+.form-auth-left {
+  margin-left: 10%;
+}
+
+.form-auth {
+  border: solid 1px #ccc !important;
+  padding: 40px;
+  margin: 0 auto;
+  max-width: 400px;
+  border-radius: 13px;
+  background-color: white;
+  color: black;
+}
+
+.form-auth-methods-header {
+  margin-bottom: 20px;
+}
+
+.clear {
+  overflow: hidden;
+}
+
+.auth-via-email-input {
+  padding: 10px 20px;
+  border-radius: 4px 0 0 4px;
+  border: solid 1px black !important;
+  font-family: Lato;
+  font-size: 20px;
+  line-height: 1em;
+  outline: none;
+  float: left;
+  width: calc(100% - 160px);
+}
+
+.auth-via-email-submit {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  line-height: 1em;
+  float: left;
+  border: solid 1px black !important;
+  height: 46px;
+  border-radius: 0 4px 4px 0;
+  border-left: 0 !important;
+  cursor: pointer;
+  width: 160px;
+  outline: 0;
+}
+
+.auth-via-email-submit[disabled] {
+  opacity: 0.8;
+  cursor: wait;
+}
+
+.auth-via-email-submit:hover {
+  background-color: #333;
+}
+
+.form-auth-form {
+  margin-bottom: 0;
+}
+
+.form-auth-message,
+.form-auth-by-email,
+.form-auth-or {
+  font-size: 18px;
+}
+
+.form-auth-or {
+  margin: 10px 0;
+}
+
+.form-auth-form-error {
+  color: red;
+  font-size: 15px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.google-signin-button {
+  width: 191px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .form-auth-left, .form-auth-right {
+    width: calc(50% - 20px);
+  }
+
+  .form-auth-left {
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .form-auth-left,
+  .form-auth-right {
+    display: block !important;
+    height: auto;
+    float: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .form-auth-left {
+    margin: 40px 0;
+  }
+
+  .form-auth-left .middle-inner,
+  .form-auth-right .middle-inner {
+    display: block;
+  }
+
+  .form-auth {
+    border-right: 0 !important;
+    border-left: 0 !important;
+    border-bottom: 0 !important;
+    border-radius: 0;
+    width: 100%;
+    margin: 0;
+    max-width: calc(100% - 20px);
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .auth-via-email-input {
+    float: none;
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+  }
+
+  .auth-via-email-submit {
+    float: none;
+    width: 100%;
+    border-radius: 0 0 4px 4px;
+  }
+}
+
+.grecaptcha-badge { visibility: hidden; }
+
+.link-later {
+  margin-top: 40px;
+}
